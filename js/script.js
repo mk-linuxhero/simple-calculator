@@ -6,7 +6,7 @@ let calculate = (number) => {
 
 let result = () => {
   try {
-    input.value = eval(input.value);
+    input.value = Function('"use strict";return (' + input.value + ")")();
   } catch (err) {
     alert("Enter the valid result");
   }
