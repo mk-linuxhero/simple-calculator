@@ -19,3 +19,12 @@ function clr() {
 function del() {
   input.value = input.value.slice(0, -1);
 }
+
+// Enter
+
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("equal").click();
+  }
+});
